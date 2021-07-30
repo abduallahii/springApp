@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringAPP" />
+        <module name="springmvc5-hibernate5-jsp-mysql-example" />
       </profile>
     </annotationProcessing>
   </component>
