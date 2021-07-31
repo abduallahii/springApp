@@ -45,6 +45,7 @@
 <div class="container-md"  >
     <%--<input type="button" value="Add"  onclick="window.location.href('') ; return false;"/>--%>
     <form:form action="saveCustomer" modelAttribute="customer" method="POST" >
+        <form:hidden path="id"/>
         <table style="text-align: center ; align-items: center ; border-collapse: collapse; ">
             <tbody>
             <tr>

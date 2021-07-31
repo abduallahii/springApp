@@ -46,14 +46,21 @@
             <th scope="col">First</th>
             <th scope="col">Last</th>
             <th scope="col">email</th>
+            <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
         <c:forEach var="tempCust" items="${customers}">
+            <c:url var="updateLink" value="/customer/ShowFormUpdate">
+                <c:param name="customerID" value="${tempCust.id}"/>
+            </c:url>
             <tr>
                 <td>${tempCust.firstName}</td>
                 <td>${tempCust.lastname}</td>
                 <td>${tempCust.email}</td>
+                <td>
+                    <a href="${updateLink}">Update</a>
+                </td>
             </tr>
         </c:forEach>
         </tbody>
