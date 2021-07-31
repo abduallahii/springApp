@@ -39,5 +39,12 @@ public class customerServicesImpl implements customerServices{
         customerDAO.deleteCustomer(theId);
     }
 
+    @Override
+    @Transactional
+    public List<customer> searchCustomers(String data) {
+        System.out.println("search for : " + data);
+          return customerDAO.searchCustomers(data);
+    }
+
 
 }

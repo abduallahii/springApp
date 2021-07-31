@@ -45,5 +45,13 @@ public class CustomerDAOImpl implements CustomerDAO{
         currSession.delete(ToDelete);
     }
 
+    @Override
+    public List<customer> searchCustomers(String data) {
+        Session CurrentSession = sessionFactory.getCurrentSession() ;
+        Query<customer> theQuery = CurrentSession.createQuery("from customer where first_name like ('"+data+"')" , customer.class);
+        List<customer> customers = theQuery.getResultList();
+        return customers;
+    }
+
 
 }

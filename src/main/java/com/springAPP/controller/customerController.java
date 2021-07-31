@@ -26,6 +26,13 @@ public class customerController {
         return "list-cust";
     }
 
+    @GetMapping("/search")
+    public String listSearchedCustomer(@ModelAttribute("theSearchName")String  data , Model model){
+        List<customer> theCustomers = customerservices.searchCustomers(data);
+        model.addAttribute("customers" , theCustomers);
+        return "list-cust";
+    }
+
     @GetMapping("/ShowFormADD")
     public String ShowFormADD(Model model){
         customer theCustomer = new customer();
